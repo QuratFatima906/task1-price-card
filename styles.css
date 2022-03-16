@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
 :root {
   --body-bg: #789cce;
   --text-grey: #aeb6b9;
   --background-color: #fff;
+  --text-blue: #4767bc;
 }
 
 * {
@@ -11,7 +14,7 @@
 }
 
 body {
-  font-family: Roboto, "Helvetica Ne", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   background-color: var(--body-bg);
   width: 100%;
@@ -23,6 +26,7 @@ body {
   max-width: 1200px;
   margin: 14rem auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
   background-color: var(--background-color);
@@ -44,9 +48,9 @@ body {
   text-align: center;
 }
 .card-title {
-  color: var(--body-bg);
-  font-size: 1.05rem;
-  letter-spacing: 0.5rem;
+  color: var(--text-blue);
+  font-size: 1.5rem;
+  letter-spacing: 2px;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -57,10 +61,24 @@ body {
 }
 
 .card-price {
-  color: var(--body-bg);
+  color: var(--text-blue);
   font-weight: bold;
 }
 
 .price {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 800px;
+    gap: 4rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .container {
+    max-width: 400px;
+    gap: 4rem;
+  }
 }
